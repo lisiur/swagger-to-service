@@ -1,0 +1,17 @@
+{
+  "name": "swagger-to-service",
+  "version": "0.9.0",
+  "description": "generate js service layer and ut code from swagger defined apis",
+  "main": "index.js",
+  "author": "qintianxiang",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "mkdirp": "^0.5.1",
+    "request": "^2.83.0",
+    "swagger-parser": "^4.0.1"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  }
+}
