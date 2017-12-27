@@ -12,6 +12,13 @@
     "swagger-parser": "^4.0.1",
     "tapable": "0.2.7"
   },
+  "keywords": [
+    "swagger",
+    "api",
+    "service",
+    "code",
+    "generate"
+  ],
   "scripts": {
     "test": "node test/index.js"
   }
