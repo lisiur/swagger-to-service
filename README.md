@@ -1,6 +1,6 @@
 # swagger-to-service
 
-Convert API definitions to source code files of api/service/ut.
+Convert API definitions to source code files of api/service/ut. Support user defined plugins via Tapable.
 
 ### install
 ```shell
@@ -15,9 +15,55 @@ sts({
     url: 'http://yaml/server/test.yaml', // yaml uri
     apiPath: './out/api.js', // dist dir of api file
     servicePath: './out/service.js', // dist dir of service file
-    utPath: './out/service.ut.js' // dist dir of service ut file
+    utPath: './out/service.ut.js' // dist dir of service ut file,
+    plugins: [{
+        apply (config) {
+            config.plugin('before-parse', (data, config) => {
+                console.log('processing:', data.info.title)
+            })
+        }
+    }]
 })
 ```
+
+### plugins
+Supported events:
+
+1. __before-parse__
+
+    process raw json data from yaml
+
+    __params__: data, config
+1. after-parse
+
+    process render json data
+
+    __params__: data, config
+1. before-params
+
+    process params of eath api
+
+    __params__: params, path
+1. after-params
+
+    after processing params
+
+    __params__: params, path
+1. api-template
+
+    after processing params
+
+    __params__: template, data
+1. service-template
+
+    after processing params
+
+    __params__: template, data
+1. test-template
+
+    after processing params
+
+    __params__: template, data
 
 ### code generated
 api.js
