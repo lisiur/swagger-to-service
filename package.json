@@ -1,6 +1,6 @@
 {
   "name": "swagger-to-service",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "generate js service layer and ut code from swagger defined apis",
   "main": "index.js",
   "author": "qintianxiang",
