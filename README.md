@@ -27,39 +27,42 @@ sts({
 ```
 
 ### plugins
-Supported events:
+
+View [test code](test/DemoPlugin.js) for all plugins usage.
+
+__Supported Events:__
 
 1. __before-parse__
 
     process raw json data from yaml
 
     __params__: data, config
-1. after-parse
+1. __after-parse__
 
     process render json data
 
     __params__: data, config
-1. before-params
+1. __before-params__
 
     process params of eath api
 
     __params__: params, path
-1. after-params
+1. __after-params__
 
     after processing params
 
     __params__: params, path
-1. api-template
+1. __api-template__
 
     after processing params
 
     __params__: template, data
-1. service-template
+1. __service-template__
 
     after processing params
 
     __params__: template, data
-1. test-template
+1. __test-template__
 
     after processing params
 
