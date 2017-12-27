@@ -28,7 +28,7 @@ sts({
 
 ### plugins
 
-View [test code](test/DemoPlugin.js) for all plugins usage.
+View [test code](https://github.com/lkiarest/swagger-to-service/blob/master/test/DemoPlugin.js) for all plugins usage.
 
 __Supported Events:__
 
