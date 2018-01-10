@@ -52,6 +52,11 @@ __Supported Events:__
     after processing params
 
     __params__: params, path
+1. __after-api__
+
+    after processing each api
+
+    __params__: apiInfo, path
 1. __api-template__
 
     after processing params

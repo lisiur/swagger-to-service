@@ -25,6 +25,14 @@ import http from 'utils/http'
 {{/if}}
  */
 export const {{apiName}} = ({{#if params}}params{{/if}}) => {
+    // send request
+    {{#if defaultParams}}
+    params = Object.assign({
+        {{#each defaultParams}}
+        {{name}}: {{value}},
+        {{/each}}
+    }, params)
+    {{/if}}
     return http.{{method}}(api.{{name}}{{#if params}}, params{{/if}})
 }
 
