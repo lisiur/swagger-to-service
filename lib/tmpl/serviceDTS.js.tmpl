@@ -1,0 +1,11 @@
+declare namespace SERVICE {
+{{#each apis}}
+  /** {{description}} */
+  {{#if needParams}}
+  function {{apiName}}(params?: Definitions.{{requestBean}}): Promise<Definitions.{{responseBean}}>
+  {{else}}
+  function {{apiName}}(): Promise<Definitions.{{responseBean}}>
+  {{/if}}
+  
+{{/each}}
+}

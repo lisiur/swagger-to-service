@@ -5,27 +5,21 @@
  * @description {{description}}
  * @tutorial {{fileUrl}}
  */
-import api from 'api'
-import http from 'utils/http'
+import api from '@api'
+import http from '@utils/http'
 
 {{#each apis}}
 /**
  * {{description}}
 {{#if paramIsArray}}
- * @param { Object } params 请求参数
+ * @param {object} [params] 请求参数
 {{#each params}}
- * @param { {{type}} } params['{{name}}'] {{description}}
+ * @param { {{~type~}} } [params.{{name}}] {{description}}
 {{/each}}
 {{/if}}
-{{#if paramIsObj}}
- * @param { Array } params 请求参数
-{{#each params.items}}
- * @param { {{type}} } params[]['{{name}}'] {{description}}
-{{/each}}
-{{/if}}
+ * @returns {Promise<[Error, Definitions.{{responseBean}}]>} 响应数据
  */
 export const {{apiName}} = ({{#if params}}params{{/if}}) => {
-    // send request
     {{#if defaultParams}}
     params = Object.assign({
         {{#each defaultParams}}
@@ -33,7 +27,7 @@ export const {{apiName}} = ({{#if params}}params{{/if}}) => {
         {{/each}}
     }, params)
     {{/if}}
-    return http.{{method}}(api.{{name}}{{#if params}}, params{{/if}})
+    return http.async_{{method}}(api.{{name}}{{#if params}}, params{{/if}})
 }
 
 {{/each}}

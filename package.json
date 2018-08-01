@@ -1,11 +1,12 @@
 {
-  "name": "swagger-to-service",
-  "version": "0.9.7",
-  "description": "generate js service layer and ut code from swagger defined apis",
+  "name": "yaml-to-service",
+  "version": "0.0.0",
+  "description": "generate js service layer and ut code from yaml defined apis",
   "main": "index.js",
-  "author": "qintianxiang",
+  "author": "lisiurday",
   "license": "MIT",
   "dependencies": {
+    "dtsgenerator": "^1.1.0",
     "handlebars": "^4.0.11",
     "mkdirp": "^0.5.1",
     "request": "^2.83.0",
@@ -14,6 +15,7 @@
   },
   "keywords": [
     "swagger",
+    "yaml",
     "api",
     "service",
     "code",
