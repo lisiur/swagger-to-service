@@ -17,7 +17,7 @@ import http from '@utils/http'
  * @param { {{~type~}} } [params.{{name}}] {{description}}
 {{/each}}
 {{/if}}
- * @returns {Promise<[Error, Definitions.{{responseBean}}]>} 响应数据
+ * @returns {Promise<[CustomError, Definitions.{{responseBean}}]>} 响应数据
  */
 export const {{apiName}} = ({{#if params}}params{{/if}}) => {
     {{#if defaultParams}}
