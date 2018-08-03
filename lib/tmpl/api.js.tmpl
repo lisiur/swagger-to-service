@@ -16,6 +16,7 @@ const _dataPath = (url) => {
 
 export default {
     {{#each apis}}
-    {{name}}: _dataPath('{{url}}'), // {{description}}
+    /** {{description}} */
+    {{name}}: _dataPath('{{url}}'),
     {{/each}}
 }
