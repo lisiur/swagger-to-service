@@ -19,9 +19,8 @@ import http from '@utils/http'
 {{/if}}
  * @returns {Promise<[CustomError, Definitions.{{responseBean}}]>} 响应数据
  */
-export const {{apiName}} = (
-  {{#if params}}params: Definitions.{{requestBean}},{{/if}}
-):Promise<[CustomError, Definitions.{{responseBean}}]> => {
+export const {{apiName}} = ( {{#if params}}params: Definitions.{{requestBean}} {{/if}})
+: Promise<[CustomError, Definitions.{{responseBean}}]> => {
   {{#if defaultParams}}
   params = Object.assign({
       {{#each defaultParams}}
